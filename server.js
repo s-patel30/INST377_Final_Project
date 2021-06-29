@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 
-const express = require("express");
+import Express from 'express';
 
 var sequelize = new Sequelize('wars_1823_2003', 'student', 'INST377@UMD',{
     host: '3.236.243.212',
@@ -25,11 +25,11 @@ var Locations = sequelize.define(
 
 
 
-const app = express();
+const app = Express();
 
 const PORT = 3000;
 
-app.use(express.urlencoded({ extended: true }));
+app.use(Express.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
     res.sendFile('index.html');

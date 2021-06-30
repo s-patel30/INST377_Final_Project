@@ -32,7 +32,7 @@ const PORT = 3000;
 app.use(Express.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
-    res.sendFile('index.html');
+    res.sendFile('index.html', { root: '.' });
 });
 
 app.get('/locations', function(req, res){ 

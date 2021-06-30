@@ -10,3 +10,19 @@ async function populateLocationTable(){
         locationTable.append(newrow);
     });
 }
+
+async function addLocation() {
+    ('form#loc-put').submit((e) => {
+        e.preventDefault();
+        const form = $(this);
+        
+    });
+}
+
+async function updateLocation() {
+
+}
+
+async function deleteLocation() {
+    
+}

@@ -3,7 +3,7 @@ import Sequelize from 'sequelize';
 import Express from 'express';
 
 var sequelize = new Sequelize('wars_1823_2003', 'student', 'INST377@UMD',{
-    host: '3.236.243.212',
+    host: 'localhost',
     dialect: 'mysql'
 });
 
@@ -44,8 +44,9 @@ app.get('/modify', function(req, res) {
     res.sendFile('modify.html', { root: '.' });
 });
 
-app.get('/locations', function(req, res){ 
-    var locs = Locations.findAll();
+app.get('/locations', async (req, res) => { 
+    var locs = await Locations.findAll();
+    console.log(locs);
     res.json(locs);
 })
 

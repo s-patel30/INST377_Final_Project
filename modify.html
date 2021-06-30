@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Modify Data</title>
+    </head>
+
+    <body>
+        <div>
+            <h2>Add Location</h2>
+            <form id="loc-put" action="/locations" method="put">
+                <input type="text" id="loc-put-text" placeholder="Enter the location you wish to add">
+                <button id="loc-put-button" type="submit">Add</button>
+            </form>
+            <br>
+            <h2>Modify Location</h2>
+            <form id="loc-post" action="/locations" method="post">
+                <input type="text" id="loc-post-id" placeholder="Enter the ID of the location you wish to modify">
+                <input type="text" id="loc-post-text" placeholder="Enter the modification to the location">
+                <button id="loc-post-button" type="submit">Modify</button>
+            </form>
+            <br>
+            <h2>Delete Location</h2>
+            <form id="loc-delete" action="/locations" method="delete">
+                <input type="text" id="loc-delete-id" placeholder="Enter the ID of the location you wish to delete">
+                <button id="loc-delete-button" type="submit">Delete</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -48,7 +48,12 @@ app.get('/locations', async (req, res) => {
     var locs = await Locations.findAll();
     console.log(locs);
     res.json(locs);
-})
+});
+
+app.put('/locations', async(req, res) => {
+    const newloc = await Locations.create(req.params.location)
+    res.json(newloc.location_id)
+});
 
 app.listen(PORT)
 console.log('Server started at port: ' + PORT);

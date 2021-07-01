@@ -66,8 +66,28 @@ app.get('/food', async (req, res) => {
     foodReq.end();
 });
 
-app.put('/food', async(req, res) => {
-    
+app.put('/locations', async(req, res) => {
+    var message = "Unfortunately I can't actually do anything :(\n";
+    message += "But if I could, I'd run the following INSERT query:\n";
+    message += "INSERT INTO locations (location_name) VALUES " + req.body.location_name + ";";
+    var data = {'message': message};
+    res.json(data);
+});
+
+app.post('/locations', async(req, res) => {
+    var message = "Unfortunately I can't actually do anything :(\n";
+    message += "But if I could, I'd run the following UPDATE query:\n";
+    message += "UPDATE locations SET location_name=" + req.body.location_name + " WHERE location_id=" + req.body.location_id + ";";
+    var data = {'message': message};
+    res.json(data);
+});
+
+app.delete('/locations', async(req, res) => {
+    var message = "Unfortunately I can't actually do anything :(\n";
+    message += "But if I could, I'd run the following DELETE query:\n";
+    message += "DELETE FROM locations WHERE location_id" + req.body.location_name + ";";
+    var data = {'message': message};
+    res.json(data);
 });
 
 app.listen(PORT)

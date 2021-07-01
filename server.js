@@ -7,21 +7,9 @@ const app = Express();
 const PORT = 3000;
 
 app.use(Express.urlencoded({ extended: true }));
+app.use(Express.static('public'));
 
-const foodAppToken = 'Xs0gbdARsfYYjECTzIQc09FP8';
 
-const foodReqParams = {
-    $limit: 20
-}
-
-const foodReqArgs = QueryString.stringify(foodReqParams);
-
-const foodReqOptions = {
-    hostname: 'data.princegeorgescountymd.gov',
-    port: '443',
-    path: '/resource/umjn-t2iz.json?' + foodReqArgs,
-    method: 'GET'
-}
 
 app.get('/', function(req, res) {
     res.sendFile('table.html', { root: '.' });
@@ -36,9 +24,24 @@ app.get('/modify', function(req, res) {
     res.sendFile('modify.html', { root: '.' });
 });
 
+
 app.get('/food', async (req, res) => { 
+    const foodAppToken = 'Xs0gbdARsfYYjECTzIQc09FP8';
+
+    const foodReqParams = {
+        $limit: 20
+    }
+
+    const foodReqArgs = QueryString.stringify(foodReqParams);
+
+    const foodReqOptions = {
+        hostname: 'data.princegeorgescountymd.gov',
+        port: '443',
+        path: '/resource/umjn-t2iz.json?' + foodReqArgs,
+        method: 'GET'
+    }
+    
     const foodReq = Https.request(foodReqOptions, (foodRes) => {
-        console.log('statusCode:', foodRes.statusCode);
         var dataBuf = [];
         foodRes.on('data', function(chunk) {
             dataBuf.push(chunk);
@@ -61,7 +64,6 @@ app.get('/food', async (req, res) => {
         console.error(error);
     });
     foodReq.end();
-    console.log(foodReq);
 });
 
 app.put('/food', async(req, res) => {

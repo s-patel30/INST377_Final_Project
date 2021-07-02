@@ -8,45 +8,49 @@
     </head>
 
     <body id="back-image">
-        <section>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-                </div>
-            
-                <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="table">
-                    Table
-                    </a>
-            
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+            </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start buttons">
+                    <div class="button is-primary is-light">
+                        <a class="navbar-item" href="table">
+                            Table
+                        </a>
+                    </div>
+                    <div class="button is-primary is-light">
                     <a class="navbar-item" href="modify">
                     Modify
                     </a>
+                    </div>
                 </div>
             
-                <div class="navbar-end">
-                </div>
-                </div>
-            </nav>
-        </section>
-        <div class="container">
-            <div class="column">
-                <h1>Restaurants</h1>
-                <table class="food-table is-centered">
-                    <tr>
-                        <th>Establishment ID</th>
-                        <th>Name</th>
-                        <th>Owner</th>
-                        <th>Address</th>
-                    </tr>
-                </table>
+                <div class="navbar-end"></div>
             </div>
-        </div>
+        </nav>
+            <div class="container">
+                <div class="notification is-primary">
+                    <div class="columns is-desktop">
+                            <div class="column">
+                                <h1>Restaurants</h1>
+                                <table class="food-table">
+                                    <tr>
+                                        <th>Establishment ID</th>
+                                        <th>Name</th>
+                                        <th>Owner</th>
+                                        <th>Address</th>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div>
     </body>
-    <script src="script.js"></script>
+    <script src="table.js"></script>
 </html>

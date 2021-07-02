@@ -13,20 +13,4 @@ async function populateFoodTable(){
     });
 }
 
-async function addLocation() {
-    ('form#loc-put').submit((e) => {
-        e.preventDefault();
-        const form = $(this);
-        
-    });
-}
-
-async function updateLocation() {
-
-}
-
-async function deleteLocation() {
-    
-}
-
 window.onload = populateFoodTable;

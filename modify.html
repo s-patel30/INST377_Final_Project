@@ -3,27 +3,30 @@
     <head>
       <meta charset="utf-8">
       <title>Modify Data</title>
+      <script src="modify.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
     <body>
         <div>
             <h2>Add Location</h2>
-            <form id="loc-put" action="/locations" method="put">
+            <form id="loc-put">
                 <input type="text" id="loc-put-text" placeholder="Enter the location you wish to add">
-                <button id="loc-put-button" type="submit">Add</button>
+                <button id="loc-put-button" onclick="addLocation()">Add</button>
             </form>
             <br>
             <h2>Modify Location</h2>
-            <form id="loc-post" action="/locations" method="post">
+            <form id="loc-post">
                 <input type="text" id="loc-post-id" placeholder="Enter the ID of the location you wish to modify">
                 <input type="text" id="loc-post-text" placeholder="Enter the modification to the location">
-                <button id="loc-post-button" type="submit">Modify</button>
+                <button id="loc-post-button" onclick="updateLocation()">Modify</button>
             </form>
             <br>
             <h2>Delete Location</h2>
-            <form id="loc-delete" action="/locations" method="delete">
+            <form id="loc-delete">
                 <input type="text" id="loc-delete-id" placeholder="Enter the ID of the location you wish to delete">
-                <button id="loc-delete-button" type="submit">Delete</button>
+                <button id="loc-delete-button" onclick="deleteLocation()">Delete</button>
             </form>
         </div>
     </body>

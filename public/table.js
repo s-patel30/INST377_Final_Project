@@ -1,3 +1,10 @@
+function toggleBurger() {
+    var burger = document.querySelector('.navbar-burger');
+    var menu = document.querySelector('.navbar-menu');
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+}
+
 async function populateFoodTable(){
     const request = await fetch('/food');
     const restaurants = await request.json();

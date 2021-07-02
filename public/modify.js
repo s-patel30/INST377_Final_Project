@@ -1,3 +1,10 @@
+function toggleBurger() {
+    var burger = document.querySelector('.navbar-burger');
+    var menu = document.querySelector('.navbar-menu');
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+}
+
 async function addLocation() {
     const data = JSON.stringify({
         location_name: document.querySelector('#loc-put-text').value

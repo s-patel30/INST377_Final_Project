@@ -4,7 +4,7 @@ import QueryString from 'querystring';
 
 const app = Express();
 
-const PORT = 80;
+const PORT = 3000;
 
 app.use(Express.urlencoded({ extended: true }));
 app.use(Express.static('public'));

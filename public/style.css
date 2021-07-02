@@ -1,15 +1,14 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
-/*#back-image{
-  background: url(background.jpg);
-  border: 1px solid black;
-  background-repeat: no-repeat;
-  padding: 50px;
+html, body {
+  margin: 0;
+  height: 100%;
 }
-*/
 
 body{
   background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1{
@@ -26,15 +25,6 @@ h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 /*
-.food-table{
-    border: 1px solid lightblue;
-  }
-
-  th {
-    background-color: rgb(148, 129, 231);
-    color: white;
-  }
-
   table, th, td {
     border: 1px solid black;
     color: rgb(241, 9, 9);

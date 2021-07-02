@@ -85,7 +85,7 @@ app.post('/locations', async(req, res) => {
 app.delete('/locations', async(req, res) => {
     var message = "Unfortunately I can't actually do anything :(\n";
     message += "But if I could, I'd run the following DELETE query:\n";
-    message += "DELETE FROM locations WHERE location_id=\n" + req.body.location_name + "\n;";
+    message += "DELETE FROM locations WHERE location_id=\"" + req.body.location_id + "\";";
     var data = {'message': message};
     res.json(data)
 });

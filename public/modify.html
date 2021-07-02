@@ -25,9 +25,9 @@
                         </a>
                     </div>
                     <div class="button is-primary is-light">
-                    <a class="navbar-item" href="modify">
-                    Modify
-                    </a>
+                        <a class="navbar-item" href="modify">
+                            Modify
+                        </a>
                     </div>
                 </div>
             
@@ -35,35 +35,39 @@
             </div>
         </nav>
         <div class="container">
-            <h1>Modify Fields</h1>
             <div class="notification is-primary columns">
                 <div class="column">
-                    <h2>Add Location</h2>
-                    <form id="loc-put">
-                        <input class="input" type="text" id="loc-put-text" placeholder="Enter the location you wish to add">
+                    <h1>Modify Fields</h1>
+                    <div class="columns">
+                        <div class="column">
+                            <h2>Add Location</h2>
+                            <form id="loc-put">
+                                <input class="input" type="text" id="loc-put-text" placeholder="Enter the location you wish to add">
+                                <br>
+                                <button class="button is-light" id="loc-put-button" onclick="addLocation()">Add</button>
+                            </form>
+                        </div>
                         <br>
-                        <button class="button is-light" id="loc-put-button" onclick="addLocation()">Add</button>
-                    </form>
-                </div>
-                <br>
-                <div class="column">
-                    <h2>Modify Location</h2>
-                    <form id="loc-post">
-                        <input class="input" type="text" id="loc-post-id" placeholder="Enter the ID of the location you wish to modify">
+                        <div class="column">
+                            <h2>Modify Location</h2>
+                            <form id="loc-post">
+                                <input class="input" type="text" id="loc-post-id" placeholder="Enter the ID of the location you wish to modify">
+                                <br>
+                                <input class="input" type="text" id="loc-post-text" placeholder="Enter the modification to the location">
+                                <br>
+                                <button class="button is-light" id="loc-post-button" onclick="updateLocation()">Modify</button>
+                            </form>
+                        </div>
                         <br>
-                        <input class="input" type="text" id="loc-post-text" placeholder="Enter the modification to the location">
-                        <br>
-                        <button class="button is-light" id="loc-post-button" onclick="updateLocation()">Modify</button>
-                    </form>
-                </div>
-                <br>
-                <div class="column">
-                    <h2>Delete Location</h2>
-                    <form id="loc-delete">
-                        <input class="input" type="text" id="loc-delete-id" placeholder="Enter the ID of the location you wish to delete">
-                        <br>
-                        <button class="button is-light" id="loc-delete-button" onclick="deleteLocation()">Delete</button>
-                    </form>
+                        <div class="column">
+                            <h2>Delete Location</h2>
+                            <form id="loc-delete">
+                                <input class="input" type="text" id="loc-delete-id" placeholder="Enter the ID of the location you wish to delete">
+                                <br>
+                                <button class="button is-light" id="loc-delete-button" onclick="deleteLocation()">Delete</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
